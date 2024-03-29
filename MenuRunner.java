@@ -23,6 +23,11 @@ public class MenuRunner {
 		System.out.println("The first number you picked is: " + number1);
 		System.out.println("The second number you picked is: " + number2);
 		System.out.println("The choice you picked is: " + number3);
+		
+		performOperationUsingSwitch(number1, number2, number3);
+	}
+
+	private static void performOperationUsingNestedIfElse(int number1, int number2, int number3) {
 		if(number3 == 1) {
 			int sum = number1 + number2;
 			System.out.println(number1 + " + " + number2 + " = " + sum);
@@ -37,6 +42,31 @@ public class MenuRunner {
 			System.out.println(number1 + " * " + number2 + " = " + product);
 		} else {
 			System.out.println("You did not choose a number from 1 to 4 ...");
+		}
+	}
+	
+	private static void performOperationUsingSwitch(int number1, int number2, int number3) {
+		
+		switch(number3) {
+		case 1: 
+			int sum = number1 + number2;
+			System.out.println(number1 + " + " + number2 + " = " + sum);
+			break;
+		case 2:
+			int difference = number1 - number2;
+			System.out.println(number1 + " - " + number2 + " = " + difference);
+			break;
+		case 3:
+			int quotient = number1 / number2;
+			System.out.println(number1 + " / " + number2 + " = " + quotient);
+			break;
+		case 4:
+			int product = number1 * number2;
+			System.out.println(number1 + " * " + number2 + " = " + product);
+			break;
+		default : 
+			System.out.println("You did not choose a number from 1 to 4 ...");
+			break;
 		}
 	}
 }
